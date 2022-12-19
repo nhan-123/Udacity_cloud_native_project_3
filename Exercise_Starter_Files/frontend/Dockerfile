@@ -6,8 +6,7 @@ WORKDIR $APP_HOME
 COPY ./frontend ./
 
 # Install production dependencies.
-RUN apt-get update && \
-    pip install --upgrade pip && \
+RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
 EXPOSE 8080

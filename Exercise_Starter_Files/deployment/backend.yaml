@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: toanla1306/project-3-backend-monitoring:latest
+          image: 12345607071999/image_backend:latest
           imagePullPolicy: Always
           ports:
           - name: backendport

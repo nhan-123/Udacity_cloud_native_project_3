@@ -12,11 +12,9 @@ ENV PROJECT_ID ${PROJECT_ID}
 
 
 # Install production dependencies.
-RUN apt-get update && \
-    pip install --upgrade pip && \
+RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
-# CMD ["gunicorn", "--access-logfile", "-", "--error-logfile", "-", "-w", "4", "-b", "0.0.0.0:8080", "app:app"]
 EXPOSE 8080
 
 ENTRYPOINT ["python", "app.py"]
