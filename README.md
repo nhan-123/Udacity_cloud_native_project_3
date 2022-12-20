@@ -37,35 +37,35 @@ The avarage of Ram is 300Mib
 ## Creating SLIs and SLOs  
 SLOs:
 99.95% of uptime per month  
-.03% of 40x/50x responses per month.  
+0.5% of 40x/50x responses per month.  
 Application responses should be served within 1500 ms per month.  
 Monthly average CPU usage should be 60% or less.  
 Monthly average memory usage should not exceed 600Mib.  
 SLIs:
 The average 20x responses of the web is 97.99%.  
-1.5% of the total incoming requests had 50x responses.  
+1% of the total incoming requests had 50x responses.  
 It took an average of 600 ms for incoming requests to be served.  
 The average of CPUs is 50%.  
 The avarage of Ram is 300Mib.  
 
 ## Craft KPIs based on SLIs and SLOs.
-The average 20x or 30x responses of the web is 97.99%.  
+* The average 20x or 30x responses of the web is 97.99%.  
 Monthly uptime - this KPI indicates the total usability of the application.  
 20x code responses per month - this KPI indicates availability of the pages of the application.  
 Monthly traffic - this KPI will indicate the number of requests served by the application.  
-1.5% of the total incoming requests had 50x responses.  
+* 1% of the total incoming requests had 50x responses.  
 Monthly downtime - this KPI indicates the number of times the application was down  
 Errors per month - this KPI will indicate the monthly errors encountered in the application.  
 Monthly traffic - this KPI will indicate the number of requests served by the application.  
-It took an average of 600 ms for incoming requests to be served..  
+* It took an average of 600 ms for incoming requests to be served.  
 Average monthly latency - this KPI will indicate the time it took for the application to respond to requests.  
 Monthly uptime - this KPI indicates the total usability of the application.  
 Monthly traffic - this KPI will indicate the number of requests served by the application.  
-The average of CPUs is 50%.  
+* The average of CPUs is 50%.  
 Average monthly CPU usage of pod used by the application - this KPI will indicate how much CPU is used by the source pod of the application.  
 Average monthly CPU usage of all the pods - this KPI will indicate how much CPU is used by all the pods required to run the application.  
 Monthly quota limit - this KPI will indicate whether the application is exceeding its usage of the CPU quota.  
-The avarage of Ram is 300Mib.  
+* The avarage of Ram is 300Mib.  
 Average monthly memory usage of pod used by the application - this KPI will indicate how much memory is used by the source pod of the application.  
 Average monthly memory usage of all the pods - this KPI will indicate how much memory is used by all the pods required to run the application.  
 Monthly quota limit - this KPI will indicate whether the application is exceeding its usage of the memory quota.  
