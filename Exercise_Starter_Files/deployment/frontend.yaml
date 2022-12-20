@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: 12345607071999/image_frontend:tagname:latest
+          image: 12345607071999/image_frontend:latest
           imagePullPolicy: Always
           ports:
           - name: frontendport
