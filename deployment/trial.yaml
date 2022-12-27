@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
         - name: trial
-          image: toanla1306/project-3-trial-monitoring:latest
+          image: 12345607071999/image_trial:latest
           imagePullPolicy: Always
           ports:
           - name: trialport
