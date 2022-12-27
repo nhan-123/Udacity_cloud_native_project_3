@@ -43,7 +43,7 @@ The avarage of Ram is 300Mib
 
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
-- ![default ns](/answer-img/tracing-error-500.png)
+
 
 TROUBLE TICKET
 
