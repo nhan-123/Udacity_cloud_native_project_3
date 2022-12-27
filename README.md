@@ -4,15 +4,15 @@
 
 *TODO:* run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
 
-![Successfully install Grafana, Prometheus, and Jaeger](https://user-images.githubusercontent.com/61376012/208572701-fded96a7-64a5-40a1-90df-d611585bc25e.png)
+- ![default ns](/Screenshots/all_pod_running.png)
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
-![Successfully access Grafana’s web UI](https://user-images.githubusercontent.com/61376012/208572812-79c2258b-7be7-4c40-ac54-54f069b9bea4.png)
+- ![default ns](/Screenshots/Successfully_access_Grafana_web_UI.png)
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
-![image](https://user-images.githubusercontent.com/61376012/208578838-222171e6-1adc-4f21-954a-4dc520f47ea1.png)
+- ![default ns](/Screenshots/Locate_and_share_an_observability_dashboard.png)
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.  
@@ -32,7 +32,32 @@ The avarage of Ram is 300Mib
 
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.  
-![image](https://user-images.githubusercontent.com/61376012/208604422-ef480a52-7baa-4651-8a6f-91959c359b83.png)
+- ![default ns](/Screenshots/Create_a_Dashboard_to_measure_our_SLIs.png)
+
+## Tracing our Flask App
+*TODO:* We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.  
+- ![default ns](/Screenshots/jaegerspan1.png)
+- ![default ns](/Screenshots/jaegerspan2.png)
+## Jaeger in Dashboards
+*TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
+
+## Report Error
+*TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
+- ![default ns](/answer-img/tracing-error-500.png)
+
+TROUBLE TICKET
+
+Name: 403 Error on backend/app.py
+
+Date: September 21 2022, 09:46:35.443
+
+Subject: 403 Error in star endpoint, failed to resolve
+
+Affected Area: File "/app/app.py", line 107, in add_star
+
+Severity: Severe
+
+Description: TypeError: The view function for 'add_star' did not return a valid response. The function either returned None or ended without a return statement.
 
 ## Creating SLIs and SLOs  
 SLOs:
@@ -48,7 +73,7 @@ It took an average of 600 ms for incoming requests to be served.
 The average of CPUs is 50%.  
 The avarage of Ram is 300Mib.  
 
-## Craft KPIs based on SLIs and SLOs.
+## Building KPIs for our plan
 * The average 20x or 30x responses of the web is 97.99%.  
 Monthly uptime - this KPI indicates the total usability of the application.  
 20x code responses per month - this KPI indicates availability of the pages of the application.  
@@ -71,5 +96,4 @@ Average monthly memory usage of all the pods - this KPI will indicate how much m
 Monthly quota limit - this KPI will indicate whether the application is exceeding its usage of the memory quota.  
 
 ## Final Dashboard
-![image](https://user-images.githubusercontent.com/61376012/209266637-e0915b97-aa32-44db-bcf9-17f2a7e94604.png)
-
+- ![default ns](/Screenshots/Final_Dasboard.png)
