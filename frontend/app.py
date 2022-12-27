@@ -58,7 +58,7 @@ historgram_status_path = metrics.histogram('requests_by_status_and_path', 'Reque
 @historgram_status_path
 def homepage():
     with tracer.start_active_span('home-page'):
-        return render_template("main.html")
+        return render_template("HELLO")
 
 
 if __name__ == "__main__":
