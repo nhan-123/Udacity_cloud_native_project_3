@@ -5,6 +5,7 @@
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
 # you're doing.
+Vagrant.require_version ">= 2.2.10"
 Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
@@ -14,7 +15,7 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   # Use any version between 15.2.31.300 and 15.2.31.570
   config.vm.box = "opensuse/Leap-15.2.x86_64"
-  config.vm.box_version = "15.2.31.354"
+  config.vm.box_version = "15.2.31.584"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -45,7 +46,7 @@ Vagrant.configure("2") do |config|
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
-  config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network "private_network", ip: "192.168.33.11"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -70,7 +71,7 @@ Vagrant.configure("2") do |config|
 
     vb.memory = "4096"
     #vb.memory = "2048"
-    vb.name = "k3s"
+    vb.name = "project-3"
   end
   #
   # View the documentation for the provider you are using for more
@@ -79,13 +80,12 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+  config.vm.provision "shell", inline: <<-SHELL
+     sudo zypper --non-interactive install apparmor-parser
+  SHELL
 
   args = []
       config.vm.provision "k3s shell script", type: "shell",
-          path: "scripts/k3s.sh",
+          path: "k3s.sh",
           args: args
 end

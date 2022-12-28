@@ -38,9 +38,10 @@ The avarage of Ram is 300Mib
 *TODO:* We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.  
 - ![default ns](/Screenshots/jaegerspan1.png)
 - ![default ns](/Screenshots/jaegerspan2.png)
+- ![default ns](/Screenshots/trace_backend.png)
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
-- ![default ns](/Screenshots/jaegerdashboard.png)
+- ![default ns](/Screenshots/trace_backend2.png)
 
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
@@ -48,17 +49,17 @@ The avarage of Ram is 300Mib
 
 TROUBLE TICKET
 
-Name: 403 Error on backend/app.py
+Name: 50x server error 
 
-Date: September 21 2022, 09:46:35.443
+Date: Dec 28 2022, 10:56:35.443
 
-Subject: 403 Error in star endpoint, failed to resolve
+Subject: 50x server error 
 
-Affected Area: File "/app/app.py", line 107, in add_star
+Affected Area: on file backend-app.py
 
-Severity: Severe
+Severity: Medium
 
-Description: TypeError: The view function for 'add_star' did not return a valid response. The function either returned None or ended without a return statement.
+Description: Get error "fail to get endpoint" 
 
 ## Creating SLIs and SLOs  
 SLOs:
