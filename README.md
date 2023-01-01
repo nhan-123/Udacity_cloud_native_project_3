@@ -4,7 +4,7 @@
 
 *TODO:* run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
 
-- ![default ns](/Screenshots/all_pod_running.png)
+- ![default ns](/Screenshots/kubectl_get_pods.png)
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
@@ -12,7 +12,7 @@
 
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
-- ![default ns](/Screenshots/Locate_and_share_an_observability_dashboard.png)
+- ![default ns](/Screenshots/Promethues_as_a_datasource.png)
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.  
@@ -46,34 +46,27 @@ The avarage of Ram is 300Mib
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
 
+- ![default ns](/Screenshots/ticket.png)
 
 TROUBLE TICKET
 
-Name: 50x server error 
+Name: Can't to connect database
 
-Date: Dec 28 2022, 10:56:35.443
+Date: 2023-01-01 22:11:19.731
 
-Subject: 50x server error 
+Subject: Can't to connect database 
 
 Affected Area: on file backend-app.py
 
 Severity: Medium
 
-Description: Get error "fail to get endpoint" 
+Description: issue with database connection on star endpoint 
 
 ## Creating SLIs and SLOs  
-SLOs:
-99.95% of uptime per month  
-0.5% of 40x/50x responses per month.  
-Application responses should be served within 1500 ms per month.  
-Monthly average CPU usage should be 60% or less.  
-Monthly average memory usage should not exceed 600Mib.  
-SLIs:
-The average 20x responses of the web is 97.99%.  
-1% of the total incoming requests had 50x responses.  
-It took an average of 600 ms for incoming requests to be served.  
-The average of CPUs is 50%.  
-The avarage of Ram is 300Mib.  
+The uptime of web application is 97.99% per month.   
+More than 95% request should be successfull per month 
+The average of CPUs is 60% per month
+The avarage of Ram is 300Mib per month 
 
 ## Building KPIs for our plan
 * The average 20x or 30x responses of the web is 97.99%.  
