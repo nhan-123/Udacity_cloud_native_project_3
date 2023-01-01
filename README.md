@@ -64,9 +64,9 @@ Description: issue with database connection on star endpoint
 
 ## Creating SLIs and SLOs  
 The uptime of web application is 97.99% per month.   
-More than 95% request should be successfull per month 
-The average of CPUs is 60% per month
-The avarage of Ram is 300Mib per month 
+More than 95% request should be successfull per month.  
+The average of CPUs is 60% per month.  
+The avarage of Ram is 300Mib per month.  
 
 ## Building KPIs for our plan
 * The average 20x or 30x responses of the web is 97.99%.  
