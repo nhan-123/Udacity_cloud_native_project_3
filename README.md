@@ -65,23 +65,19 @@ Description: issue with database connection on star endpoint
 ## Creating SLIs and SLOs  
 The uptime of web application is 97.99% per month.   
 More than 95% request should be successfull per month.  
-The average of CPUs is 60% per month.  
+The average of CPUs is less than 80% per month.  
 The avarage of Ram is 300Mib per month.  
 
 ## Building KPIs for our plan
-* The average 20x or 30x responses of the web is 97.99%.  
+* The average 20x or 30x responses of the web is more than 95%  
 Monthly uptime - this KPI indicates the total usability of the application.  
 20x code responses per month - this KPI indicates availability of the pages of the application.  
-Monthly traffic - this KPI will indicate the number of requests served by the application.  
-* 1% of the total incoming requests had 50x responses.  
-Monthly downtime - this KPI indicates the number of times the application was down  
-Errors per month - this KPI will indicate the monthly errors encountered in the application.  
-Monthly traffic - this KPI will indicate the number of requests served by the application.  
-* It took an average of 600 ms for incoming requests to be served.  
+Monthly traffic - this KPI will indicate the number of requests served by the application.    
+* The uptime of web application is 97.99% per month.
 Average monthly latency - this KPI will indicate the time it took for the application to respond to requests.  
 Monthly uptime - this KPI indicates the total usability of the application.  
 Monthly traffic - this KPI will indicate the number of requests served by the application.  
-* The average of CPUs is 50%.  
+* The average of CPUs is less than 80%.  
 Average monthly CPU usage of pod used by the application - this KPI will indicate how much CPU is used by the source pod of the application.  
 Average monthly CPU usage of all the pods - this KPI will indicate how much CPU is used by all the pods required to run the application.  
 Monthly quota limit - this KPI will indicate whether the application is exceeding its usage of the CPU quota.  
