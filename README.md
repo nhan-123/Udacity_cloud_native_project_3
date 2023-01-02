@@ -88,3 +88,10 @@ Monthly quota limit - this KPI will indicate whether the application is exceedin
 
 ## Final Dashboard
 - ![default ns](/Screenshots/Final_Dasboard.png)
+Uptime Backend - The time of backend application works  
+Uptime Frontend - The time of frontend application works  
+CPU usage - Total CPU use in each Pods  
+Memory Usage - Total RAM use in each Pods  
+20x - Total request will be had a response with status 20x  
+40x - Total request will be had a response with status 40x  
+50x - Total request will be had a response with status 50x  
